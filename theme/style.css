@@ -1,0 +1,161 @@
+/* ===== LAYOUT GENERAL ===== */
+
+body.exe-web-site {
+    margin: 0;
+    display: flex; /* usamos flex en vez de floats */
+}
+
+/* ===== PANEL LATERAL IZQUIERDO ===== */
+
+#siteNav {
+    width: 300px;
+    background: #f6f6f6;
+    border-right: 1px solid #f0f0f0;
+    padding: 66px 8px 20px 8px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+
+.exe-web-site main.page {
+    margin-left: 300px; /* deja espacio al menú */
+    padding: 4.5em 20px 20px 20px;
+    width: calc(100% - 300px);
+}
+
+/* ===== FOOTER ===== */
+
+.exe-web-site #siteFooter {
+    margin-left: 300px;
+    padding: 20px;
+}
+
+/* ===== SOMBRA LATERAL (opcional visual) ===== */
+
+.exe-web-site .exe-content {
+    box-shadow:
+        inset 300px 0 0 0 #f6f6f6,
+        inset 301px 0 0 0 #f0f0f0;
+}
+
+/* ===== BOTONES SUPERIORES ===== */
+
+button#siteNavToggler {
+    left: 260px;
+}
+
+button#searchBarTogger {
+    left: 310px;
+}
+
+body.siteNav-off #siteNav {
+    display: none;
+}
+
+body.siteNav-off main.page,
+body.siteNav-off #siteFooter {
+    margin-left: 0;
+    width: 100%;
+}
+
+/* ===== NAVEGACIÓN ===== */
+
+#siteNav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#siteNav li {
+    margin-bottom: 5px;
+}
+
+#siteNav a {
+    display: block;
+    padding: 8px 15px;
+    border-radius: 8px;
+    color: #000;
+    transition: 0.3s;
+}
+
+#siteNav a:hover {
+    background: #f2f2f2;
+}
+
+#siteNav a.active {
+    background: #fff;
+    color: #d76b4a;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 767px) {
+
+    #siteNav {
+        width: 250px;
+    }
+
+    .exe-web-site main.page,
+    .exe-web-site #siteFooter {
+        margin-left: 250px;
+        width: calc(100% - 250px);
+    }
+
+    button#siteNavToggler {
+        left: 210px;
+    }
+
+    button#searchBarTogger {
+        left: 260px;
+    }
+}
+
+@media (max-width: 575px) {
+
+    body.exe-web-site {
+        display: block;
+    }
+
+    #siteNav {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .exe-web-site main.page,
+    .exe-web-site #siteFooter {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+/* ===== RESTO DE TU ESTILO ORIGINAL (SIN CAMBIOS IMPORTANTES) ===== */
+
+.exe-content {
+    color: #333;
+    background-color: #fff;
+}
+
+.exe-content a {
+    color: #d76b4a;
+}
+
+.exe-content a:hover {
+    color: #993d28;
+}
+
+.exe-content .page-title {
+    color: #078e8e;
+    font-size: 1.7rem;
+}
+
+.exe-content .box {
+    margin: 20px 0;
+    background: #fff;
+}
+
+/* puedes seguir usando el resto de tu CSS original debajo */
